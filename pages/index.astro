@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/card"
 
 import PortfolioCarousel from "@/components/PortfolioCarousel";
-import {CardWithForm} from "@/components/Form";
+
 
 ---
 
@@ -23,9 +23,9 @@ import {CardWithForm} from "@/components/Form";
   description="Maciej Plonka portfolio design"
 >
 <div class="grid grid-flow-col justify-evenly">
-<Card className={cn("w-max")}>
+<Card className={cn("w-[20vw]")}>
   <CardHeader>
-    <CardTitle>BUY TICKET</CardTitle>
+    <CardTitle>300$</CardTitle>
     <CardDescription>You have 3 unread messages.</CardDescription>
   </CardHeader>
   <CardContent className="grid gap-4">
@@ -33,10 +33,10 @@ import {CardWithForm} from "@/components/Form";
       <BellIcon />
       <div class="flex-1 space-y-1">
         <p class="text-sm font-medium leading-none">
-          Limited Time only!
+          Push Notifications
         </p>
         <p class="text-sm text-muted-foreground">
-          10% off only this week!
+          Send notifications to device.
         </p>
       </div>
     </div>
@@ -46,14 +46,14 @@ import {CardWithForm} from "@/components/Form";
   </CardContent>
   <CardFooter>
     <Button className="w-[20vw]">
-      <CheckIcon className="mr-2 h-4 w-4" /> Buy Ticket
+      <CheckIcon className="mr-2 h-4 w-4" /> Mark all as read
     </Button>
   </CardFooter>
 </Card>
 
 <Card className={cn("w-max")}>
   <CardHeader>
-    <CardTitle>BUY PASS</CardTitle>
+    <CardTitle>800$</CardTitle>
     <CardDescription>You have 3 unread messages.</CardDescription>
   </CardHeader>
   <CardContent className="grid gap-4">
@@ -61,10 +61,10 @@ import {CardWithForm} from "@/components/Form";
       <BellIcon />
       <div class="flex-1 space-y-1">
         <p class="text-sm font-medium leading-none">
-          20% OFF
+          Push Notifications
         </p>
         <p class="text-sm text-muted-foreground">
-          only now.
+          Send notifications to device.
         </p>
       </div>
     </div>
@@ -74,13 +74,38 @@ import {CardWithForm} from "@/components/Form";
   </CardContent>
   <CardFooter>
     <Button className="w-[20vw]">
-      <CheckIcon className="mr-2 h-4 w-4" /> Buy pass
+      <CheckIcon className="mr-2 h-4 w-4" /> Mark all as read
     </Button>
   </CardFooter>
 </Card>
 
-<CardWithForm client:load/>
-
+<Card className={cn("w-max")}>
+  <CardHeader>
+    <CardTitle>100%</CardTitle>
+    <CardDescription>You have 3 unread messages.</CardDescription>
+  </CardHeader>
+  <CardContent className="grid gap-4">
+    <div class=" flex items-center space-x-4 rounded-md border p-4">
+      <BellIcon />
+      <div class="flex-1 space-y-1">
+        <p class="text-sm font-medium leading-none">
+          Push Notifications
+        </p>
+        <p class="text-sm text-muted-foreground">
+          Send notifications to device.
+        </p>
+      </div>
+    </div>
+    <div>
+  
+    </div>
+  </CardContent>
+  <CardFooter>
+    <Button className="w-[20vw]">
+      <CheckIcon className="mr-2 h-4 w-4" /> Mark all as read
+    </Button>
+  </CardFooter>
+</Card>
 </div>
 
 <PortfolioCarousel client:load />
